@@ -1,0 +1,31 @@
+[workspace]
+members = [".", "macros"]
+
+[package]
+name = "abstracto3"
+description = "AbstractO3"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "abstracto3-bin"
+path = "main.rs"
+
+[lib]
+path = "abstracto3/lib.rs"
+name = "abstracto3"
+proc-macro = true
+
+[dependencies.macros]
+package = "abstracto3-macros"
+path = "./macros"
+
+
+[dependencies.pyo3]
+version = "0.20"
+features = [
+    "extension-module", # for standalone extension module
+    "abi3-py311", # for python 3.11 (That's what I'm using)
+    
+    "multiple-pymethods" # Needed for multiple #[pymethods]
+]

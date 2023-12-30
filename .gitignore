@@ -1,0 +1,4 @@
+/target
+/*.lock
+/.vs*
+__pycache__
