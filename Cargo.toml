@@ -26,6 +26,4 @@ version = "0.20"
 features = [
     "extension-module", # for standalone extension module
     "abi3-py311", # for python 3.11 (That's what I'm using)
-    
-    "multiple-pymethods" # Needed for multiple #[pymethods]
 ]
